@@ -4,8 +4,8 @@ html{
     box-sizing: border-box;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 1.5;
+     
 }
-
 body{
     background-color: #265c7b;
 }
@@ -17,21 +17,21 @@ body{
 header h1{
     margin-top: 4rem;
     font-size: 5rem;
-    
+
 }
-header .logo{
+header img{
     height: 15rem;
 
 }
 
-/*items con mismo contendio*/
-header, ul.navigation, .contenedor-descuento{
+/*items con mismo contenido*/
+header,nav ul, .contenedor-descuento{
     display: flex;
 }
 
 /* Navegacion */
 
-ul.navigation{
+nav ul{
     
     gap: 2rem;
     margin-top: -4rem;
@@ -39,43 +39,40 @@ ul.navigation{
     background-color: #f1f1f1;
     width: 30%;
     
-    
 }
 
-li.item:hover{
+nav ul li:hover{
     background-color: aqua;
     padding: 10px;
 }
 
-ul .item {
+nav ul li{
     list-style: none;
     text-transform: capitalize;
     font-size: 1.1rem;
     border-right: 1px solid black;
     padding: .5rem;
     cursor: pointer;
-   
+    
+    
 }
 
-ul .item a {
+nav ul li a {
     text-decoration: none;
     color: inherit;
+    
+    
+   
 }
-
 /*lista descuento*/
 
-.contenedor .lista-descuento{
+.contenedor, div.contenedor ul{
     margin: 0;
 }
 
 
 /*imagenes*/
 
-<<<<<<< HEAD
-.img-descuento{
-    width: 90%;
-=======
 div.contenedor-descuento img{
     width: 80%;
->>>>>>> 4596c665066f48608917856ebe6ccbebd56ca31f
 }
