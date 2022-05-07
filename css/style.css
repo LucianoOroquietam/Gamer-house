@@ -8,10 +8,7 @@ html{
 }
 
 
-header{
-    
-    display: flex;
-}
+
 
 header h1{
     margin-top: 4rem;
@@ -23,10 +20,15 @@ header .logo{
 
 }
 
+/*items con mismo contendio*/
+header, ul.navigation, .contenedor-descuento{
+    display: flex;
+}
+
 /* Navegacion */
 
 ul.navigation{
-    display: flex;
+    
     gap: 2rem;
     margin-top: -4rem;
     margin-left: 17rem;
@@ -69,7 +71,4 @@ ul .item a {
 
 .img-descuento{
     width: 80%;
-}
-.contenedor-descuento{
-    display: flex;
 }
