@@ -18,21 +18,20 @@ header h1{
     margin-top: 4rem;
     font-size: 5rem;
     
-
 }
-header img{
+header .logo{
     height: 15rem;
 
 }
 
-/*items con mismo contenido*/
-header,nav ul, .contenedor-descuento{
+/*items con mismo contendio*/
+header, ul.navigation, .contenedor-descuento{
     display: flex;
 }
 
 /* Navegacion */
 
-nav ul{
+ul.navigation{
     
     gap: 2rem;
     margin-top: -4rem;
@@ -43,12 +42,12 @@ nav ul{
     
 }
 
-nav ul li:hover{
+li.item:hover{
     background-color: aqua;
     padding: 10px;
 }
 
-nav ul li{
+ul .item {
     list-style: none;
     text-transform: capitalize;
     font-size: 1.1rem;
@@ -58,25 +57,20 @@ nav ul li{
    
 }
 
-nav ul li a {
+ul .item a {
     text-decoration: none;
     color: inherit;
 }
 
 /*lista descuento*/
 
-.contenedor, div.contenedor ul{
+.contenedor .lista-descuento{
     margin: 0;
 }
 
 
 /*imagenes*/
 
-<<<<<<< HEAD
 .img-descuento{
     width: 90%;
-=======
-div.contenedor-descuento img{
-    width: 80%;
->>>>>>> bc243bef3bfa67398419af7f5a514d871867a801
 }
