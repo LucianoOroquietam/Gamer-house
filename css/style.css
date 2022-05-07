@@ -1,29 +1,46 @@
 /*Globales*/
 
-html{
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Permanent+Marker&display=swap');
+
+
+*{
     box-sizing: border-box;
+}
+ 
+html{
+    
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    line-height: 1.5;
-     
+    line-height: 1.1;
+
 }
 body{
-    background-color: #265c7b;
+    background-color: #1B2838;
 }
 
 
 /*Encabezado*/
 
-
-header h1{
-    margin-top: 4rem;
-    font-size: 5rem;
-
-}
-header img{
-    height: 15rem;
-
+header, nav ul{
+    justify-content: center;
 }
 
+header .encabezado h1{
+    margin-top: 0;
+    font-size: 6rem;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    
+}
+
+div .img-logo{
+    margin-top: -15rem;
+    height: 13rem;
+    
+}
+.contenedor-header{
+    background-color: #171a21;
+    padding: .1rem;
+}
 /*items con mismo contenido*/
 header,nav ul, .contenedor-descuento{
     display: flex;
@@ -32,39 +49,39 @@ header,nav ul, .contenedor-descuento{
 /* Navegacion */
 
 nav ul{
-    
-    gap: 2rem;
-    margin-top: -4rem;
-    margin-left: 17rem;
-    background-color: #f1f1f1;
-    width: 30%;
+    margin-top: -5rem;
+    margin-left: 3rem;
+    padding: 0;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
     
 }
 
 nav ul li:hover{
-    background-color: aqua;
-    padding: 10px;
+    background-color:#1B2838;
+    padding: .7rem;
+    
 }
 
 nav ul li{
     list-style: none;
     text-transform: capitalize;
     font-size: 1.1rem;
-    border-right: 1px solid black;
     padding: .5rem;
     cursor: pointer;
-    
-    
+
+
 }
 
 nav ul li a {
     text-decoration: none;
     color: inherit;
-    
-    
-   
+
+
+
 }
 /*lista descuento*/
+
 
 .contenedor, div.contenedor ul{
     margin: 0;
@@ -74,5 +91,6 @@ nav ul li a {
 /*imagenes*/
 
 div.contenedor-descuento img{
-    width: 80%;
+    width: 70%;
+    margin: .7rem;
 }
