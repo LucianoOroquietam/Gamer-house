@@ -1,7 +1,7 @@
 /*Globales*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Permanent+Marker&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
@@ -9,9 +9,9 @@
  
 html{
     
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.1;
-
+    color: white;
 }
 body{
     background-color: #1B2838;
@@ -93,4 +93,22 @@ nav ul li a {
 div.contenedor-descuento img{
     width: 70%;
     margin: .7rem;
+}
+/*lomasvndido y tablas*/
+div.cajaH2 h2{
+    font-size: 4rem;
+}
+
+div.cajaH2{
+    text-align: center;
+}
+
+table,td{
+    border: solid white 0.1rem;
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+}
+td img{
+    height: 4rem;
 }
