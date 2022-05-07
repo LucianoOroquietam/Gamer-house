@@ -1,0 +1,75 @@
+/*Encabezado*/
+
+html{
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.5;
+     
+}
+
+
+header{
+    
+    display: flex;
+}
+
+header h1{
+    margin-top: 4rem;
+    font-size: 5rem;
+
+}
+header .logo{
+    height: 15rem;
+
+}
+
+/* Navegacion */
+
+ul.navigation{
+    display: flex;
+    gap: 2rem;
+    margin-top: -4rem;
+    margin-left: 17rem;
+    background-color: #f1f1f1;
+    width: 30%;
+    
+}
+
+li.item:hover{
+    background-color: aqua;
+    padding: 10px;
+}
+
+ul .item {
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    border-right: 1px solid black;
+    padding: .5rem;
+    cursor: pointer;
+    
+    
+}
+
+ul .item a {
+    text-decoration: none;
+    color: inherit;
+    
+    
+   
+}
+/*lista descuento*/
+
+.contenedor .lista-descuento{
+    margin: 0;
+}
+
+
+/*imagenes*/
+
+.img-descuento{
+    width: 80%;
+}
+.contenedor-descuento{
+    display: flex;
+}
