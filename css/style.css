@@ -1,4 +1,4 @@
-/*Encabezado*/
+/*Globales*/
 
 html{
     box-sizing: border-box;
@@ -6,8 +6,12 @@ html{
     line-height: 1.5;
      
 }
+body{
+    background-color: #265c7b;
+}
 
 
+/*Encabezado*/
 
 
 header h1{
