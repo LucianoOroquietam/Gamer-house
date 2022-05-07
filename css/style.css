@@ -71,6 +71,11 @@ ul .item a {
 
 /*imagenes*/
 
+<<<<<<< HEAD
 .img-descuento{
     width: 90%;
+=======
+div.contenedor-descuento img{
+    width: 80%;
+>>>>>>> 4596c665066f48608917856ebe6ccbebd56ca31f
 }
