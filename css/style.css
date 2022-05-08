@@ -42,7 +42,7 @@ div .img-logo{
     padding: .1rem;
 }
 /*items con mismo contenido*/
-header,nav ul, .contenedor-descuento{
+header,nav ul, .contenedor-descuento, .contenedor-footer{
     display: flex;
 }
 
@@ -93,4 +93,28 @@ nav ul li a {
 div.contenedor-descuento img{
     width: 70%;
     margin: .7rem;
+}
+
+/* Footer */
+
+footer{
+    background-color: #171a21;
+}
+
+footer p{
+    margin-bottom: -4rem;
+}
+
+.contenedor-footer{
+    justify-content: end;
+}
+
+footer img {
+    height: 11rem;
+}
+
+.autor{
+    background-color: rgb(197, 191, 191);
+    padding: 1rem;
+    text-align: center;
 }
