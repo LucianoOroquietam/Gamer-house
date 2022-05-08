@@ -122,12 +122,13 @@ fieldset div{
     text-align: center;
 }
 fieldset{
-    color: lightblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     width: 5rem;
     margin-left: 40%;
 }
 fieldset button{
-    padding: 1rem 2rem;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
     border: 0.3rem solid white;
     color: white;
     border-radius: .5rem;
@@ -141,4 +142,17 @@ fieldset button:hover{
     color:#171a21 ;
     transition: 0.5s;
     border: 0.3rem solid #171a21;
+}
+fieldset{
+    border-style: none;
+    background-color: gray;
+    border-radius: 1rem;
+}
+legend{
+    text-align: center;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:#171a21;
 }
