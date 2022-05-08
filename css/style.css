@@ -18,10 +18,11 @@ body{
 }
 
 
-/*Encabezado*/
+/*Titulos*/
 
-header, nav ul{
-    justify-content: center;
+h2{
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 header .encabezado h1{
@@ -30,6 +31,12 @@ header .encabezado h1{
     color: aliceblue;
     font-family: 'Cinzel', serif;
     
+}
+
+/*Encabezado*/
+
+header, nav ul{
+    justify-content: center;
 }
 
 div .img-logo{
@@ -41,11 +48,20 @@ div .img-logo{
     background-color: #171a21;
     padding: .1rem;
 }
-/*items con mismo contenido*/
-header,nav ul, .contenedor-descuento, .contenedor-footer{
+
+
+/*Propiedades repetidas*/
+header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards{
     display: flex;
 }
 
+th, .fondoTd, fieldset button, footer{
+    background-color: #171a21;
+}
+
+fieldset button:hover, legend, .autor{
+    color:#171a21 ;
+}
 /* Navegacion */
 
 nav ul{
@@ -54,14 +70,12 @@ nav ul{
     padding: 0;
     color: aliceblue;
     font-family: 'Cinzel', serif;
-    
 }
 
 nav ul li:hover{
     background-color:#1B2838;
     padding: .7rem;
     border-bottom: 0.2rem solid white;
-    
 }
 
 nav ul li{
@@ -70,32 +84,51 @@ nav ul li{
     font-size: 1.1rem;
     padding: .5rem;
     cursor: pointer;
-
-
 }
 
 nav ul li a {
     text-decoration: none;
     color: inherit;
-
-
-
 }
-/*lista descuento*/
 
+
+/*imagenes*/
+
+div.contenedor-descuento img{
+    width: 70%;
+    margin: .7rem;
+}
+
+.contenedor-giftcards img{
+    width: 25%;
+    height: 30rem;
+}
+
+footer img {
+    padding: 0;
+    margin-top: -1rem;
+    height: 13rem;
+}
+
+footer ul li img{
+    height: 3rem;
+}
+
+td img{
+    height: 4rem;
+}
+
+
+/*lista descuento*/
 
 div.contenedor-descuento  ul{
     margin: 2rem 2rem 2rem 0;
     padding: 0;
-    
-
 }
 
 div.contenedor-descuento  ul li{
     margin: 1rem;
     padding: 1rem 0 1rem 0;
-    
-   
 }
 
 span{
@@ -107,71 +140,6 @@ span{
 div.contenedor-descuento ul li {
     font-weight: bold;
 }
-
-
-
-/*imagenes*/
-
-div.contenedor-descuento img{
-    width: 70%;
-    margin: .7rem;
-}
-
-/* Footer */
-
-footer{
-    background-color: #171a21;
-    margin-top: .5rem;
-}
-
-
-
-
-.contenedor-footer{
-    justify-content: space-around;
-
-}
-
-footer img {
-    padding: 0;
-    margin-top: -1rem;
-    height: 13rem;
-}
-
-footer ul.columna-33{
-    display: flex;
-    margin: 0;
-    
-}
-
-
-
-
-footer ul li{
-    margin: 1rem;
-    list-style: none;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-footer ul li img{
-    height: 3rem;
-}
-
-footer h3{
-    margin-top: 2rem;
-   margin-left: 5rem ;
-   font-size: 1rem;
-}
-
-
-.autor{
-    background-color: rgb(197, 191, 191);
-    padding: 1rem;
-    text-align: center;
-    color: #171a21;
-}
-
 
 /*lo mas vendido y tablas*/
 div.cajaH2 h2{
@@ -190,12 +158,8 @@ table,td,th{
     text-align: center;
     color: rgb(135, 221, 250);
 }
-td img{
-    height: 4rem;
-}
-th, .fondoTd{
-    background-color: #171a21;
-}
+
+
 
 /*Formulario*/
 
@@ -207,7 +171,7 @@ fieldset{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     width: 50%;
     margin-left: 25%;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
 }
 fieldset button{
     text-transform: uppercase;
@@ -215,14 +179,15 @@ fieldset button{
     border: 0.3rem solid white;
     color: white;
     border-radius: .5rem;
-    background-color: #171a21;
     font-size: 1.5rem;
 
 }
+
+
+
 fieldset button:hover{
     cursor: pointer;
     background-color: white;
-    color:#171a21 ;
     transition: 0.5s;
     border: 0.3rem solid #171a21;
 }
@@ -237,24 +202,64 @@ legend{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.5rem;
-    color:#171a21;
+    
 }
+
+/*Captcha*/
 
 .inputCaptcha{
     margin: -2rem;
 }
 
+.verificado, .error{
+    background-color: aliceblue;
+    color: black;
+    margin-left: 12rem;
+    width: 50%;
+}
 
-.contenedor-giftcards{
+.verificado{
+    border: .5rem solid rgb(4, 138, 38);
+}
+.error{
+    border: .5rem solid rgb(255, 0, 0);
+
+}
+
+/* Footer */
+
+footer{
+    margin-top: .5rem;
+}
+
+.contenedor-footer{
+    justify-content: space-around;
+
+}
+
+footer ul.columna-33{
     display: flex;
+    margin: 0;
+    
 }
 
-.contenedor-giftcards img{
-    width: 25%;
-    height: 30rem;
+footer ul li{
+    margin: 1rem;
+    list-style: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-h2{
+footer h3{
+    margin-top: 2rem;
+   margin-left: 5rem ;
+   font-size: 1rem;
+}
+
+/*Copyright*/
+
+.autor{
+    background-color: rgb(197, 191, 191);
+    padding: 1rem;
     text-align: center;
-    font-size: 2.5rem;
 }

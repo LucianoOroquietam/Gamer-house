@@ -36,9 +36,12 @@ function comprobrarCaptcha(){
     let numIngresado= document.querySelector("#respuestaIngresada").value;
     if(numIngresado==random){
         document.querySelector("#resultado").innerHTML="Correcto, Registro valido";
-        console.log("hola")
+        document.querySelector("#estilocaptcha").classList.add("verificado");
+        document.querySelector("#estilocaptcha").classList.remove("error");
     }
     else{
         document.querySelector("#resultado").innerHTML="Incorrecto, vuelva a intentarlo"
+        document.querySelector("#estilocaptcha").classList.add("error");
+        document.querySelector("#estilocaptcha").classList.remove("verificado");
     }
 }
