@@ -34,7 +34,7 @@ header .encabezado h1{
 
 div .img-logo{
     margin-top: -15rem;
-    height: 13rem;
+    height: 15rem;
     
 }
 .contenedor-header{
@@ -83,9 +83,30 @@ nav ul li a {
 /*lista descuento*/
 
 
-.contenedor, div.contenedor ul{
-    margin: 0;
+div.contenedor-descuento  ul{
+    margin: 2rem 2rem 2rem 0;
+    padding: 0;
+    
+
 }
+
+div.contenedor-descuento  ul li{
+    margin: 1rem;
+    padding: 1rem 0 1rem 0;
+    
+   
+}
+
+span{
+    font-weight: 100;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+div.contenedor-descuento ul li {
+    font-weight: bold;
+}
+
 
 
 /*imagenes*/
@@ -94,7 +115,6 @@ div.contenedor-descuento img{
     width: 70%;
     margin: .7rem;
 }
-<<<<<<< HEAD
 
 /* Footer */
 
@@ -102,24 +122,55 @@ footer{
     background-color: #171a21;
 }
 
-footer p{
-    margin-bottom: -4rem;
-}
+
+
 
 .contenedor-footer{
-    justify-content: end;
+    justify-content: space-around;
+
 }
 
 footer img {
-    height: 11rem;
+    padding: 0;
+    margin-top: -1rem;
+    height: 13rem;
 }
+
+footer ul.columna-33{
+    display: flex;
+    margin: 0;
+    
+}
+
+
+
+
+footer ul li{
+    margin: 1rem;
+    list-style: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer ul li img{
+    height: 3rem;
+}
+
+footer h3{
+    margin-top: 2rem;
+   margin-left: 5rem ;
+   font-size: 1rem;
+}
+
 
 .autor{
     background-color: rgb(197, 191, 191);
     padding: 1rem;
     text-align: center;
+    color: #171a21;
 }
-=======
+
+
 /*lomasvndido y tablas*/
 div.cajaH2 h2{
     font-size: 4rem;
@@ -182,4 +233,3 @@ legend{
     font-size: 1.5rem;
     color:#171a21;
 }
->>>>>>> e51c0c5323ce9da17b8f1d8cdde06f5e038957b7
