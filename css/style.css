@@ -60,6 +60,7 @@ nav ul{
 nav ul li:hover{
     background-color:#1B2838;
     padding: .7rem;
+    border-bottom: 0.2rem solid white;
     
 }
 
@@ -172,10 +173,10 @@ footer h3{
 }
 
 
-/*lomasvndido y tablas*/
+/*lo mas vendido y tablas*/
 div.cajaH2 h2{
     font-size: 4rem;
-    margin: .5rem 1rem 0rem 1rem;
+    margin: .5rem 1rem 1rem 1rem;
 }
 
 div.cajaH2{
@@ -206,6 +207,7 @@ fieldset{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     width: 50%;
     margin-left: 25%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 fieldset button{
     text-transform: uppercase;
@@ -236,4 +238,23 @@ legend{
     font-weight: bold;
     font-size: 1.5rem;
     color:#171a21;
+}
+
+.inputCaptcha{
+    margin: -2rem;
+}
+
+
+.contenedor-giftcards{
+    display: flex;
+}
+
+.contenedor-giftcards img{
+    width: 25%;
+    height: 30rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 2.5rem;
 }
