@@ -1,7 +1,7 @@
 /*Globales*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Permanent+Marker&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
@@ -9,9 +9,9 @@
  
 html{
     
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.1;
-
+    color: white;
 }
 body{
     background-color: #1B2838;
@@ -94,6 +94,7 @@ div.contenedor-descuento img{
     width: 70%;
     margin: .7rem;
 }
+<<<<<<< HEAD
 
 /* Footer */
 
@@ -118,3 +119,67 @@ footer img {
     padding: 1rem;
     text-align: center;
 }
+=======
+/*lomasvndido y tablas*/
+div.cajaH2 h2{
+    font-size: 4rem;
+}
+
+div.cajaH2{
+    text-align: center;
+}
+
+table,td,th{
+    border: solid white 0.1rem;
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+    color: rgb(135, 221, 250);
+}
+td img{
+    height: 4rem;
+}
+th, .fondoTd{
+    background-color: #171a21;
+}
+
+fieldset div{
+    padding: 1.5rem;
+    text-align: center;
+}
+fieldset{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    width: 5rem;
+    margin-left: 40%;
+}
+fieldset button{
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    border: 0.3rem solid white;
+    color: white;
+    border-radius: .5rem;
+    background-color: #171a21;
+    font-size: 1.5rem;
+
+}
+fieldset button:hover{
+    cursor: pointer;
+    background-color: white;
+    color:#171a21 ;
+    transition: 0.5s;
+    border: 0.3rem solid #171a21;
+}
+fieldset{
+    border-style: none;
+    background-color: gray;
+    border-radius: 1rem;
+}
+legend{
+    text-align: center;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:#171a21;
+}
+>>>>>>> e51c0c5323ce9da17b8f1d8cdde06f5e038957b7
