@@ -120,6 +120,7 @@ div.contenedor-descuento img{
 
 footer{
     background-color: #171a21;
+    margin-top: .5rem;
 }
 
 
@@ -174,6 +175,7 @@ footer h3{
 /*lomasvndido y tablas*/
 div.cajaH2 h2{
     font-size: 4rem;
+    margin: .5rem 1rem 0rem 1rem;
 }
 
 div.cajaH2{
@@ -194,14 +196,16 @@ th, .fondoTd{
     background-color: #171a21;
 }
 
+/*Formulario*/
+
 fieldset div{
     padding: 1.5rem;
     text-align: center;
 }
 fieldset{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    width: 5rem;
-    margin-left: 40%;
+    width: 50%;
+    margin-left: 25%;
 }
 fieldset button{
     text-transform: uppercase;
