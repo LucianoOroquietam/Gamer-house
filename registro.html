@@ -49,27 +49,28 @@
                     
                     
                         <label for="mail">E-mail</label>
-                        <input type="email" placeholder="ejemplo@gmail.com" name="mail" id="">
+                        <input type="email" placeholder="ejemplo@gmail.com" name="mail">
                     </div>
                     <div class="numeroPass">
                         <label for="numero">Numero de telefono</label>   
                         <input type="number" name="numero" id="" placeholder="2494123456">
                 
                         <label for="pass">Contraseña</label>
-                        <input type="password" name="pass" placeholder="*******" id="">
+                        <input type="password" name="pass" placeholder="*******">
                     </div>
                     <div>
-                        <textarea name="" placeholder="Resuelva la Siguiente operacion para comprobar que es humano" id="" cols="30" rows="5"></textarea>
+                        <label for="">Resuelva la Siguiente operacion para comprobar que es humano</label>
+                        <input id="respuestaIngresada" type="">
                     </div>
                     <div>
-                        <img src="img/Captcha/resultado2.jpg" alt="captcha">
+                        <img id="imgCaptcha" src="img/Captcha/resultado2.jpg" alt="captcha">
                     </div>
                     <div>
-                        <button type="submit">Confirmar</button>
+                        <button id="btnEnviar" type="submit">Confirmar</button>
                     </div>
-
-
-
+                    <div>
+                    <p id="resultado"></p>
+                    </div>
                 </fieldset>
 
 
@@ -108,5 +109,6 @@
          <div class="autor">
             &copy; 2022 Gamer House Todos los Derechos Reservados. Luciano Oroquieta Merlino , Dante Tomas Tourn.
          </div>
+         <script type="text/javascript" src="js/captcha.js"></script>
 </body>
 </html>
