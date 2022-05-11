@@ -118,6 +118,14 @@ td img{
     height: 4rem;
 }
 
+.confirmed-error{
+    display: none;
+}
+.mostrarimagen{
+    display: inline;
+    height: 2rem;
+}
+
 
 /*lista descuento*/
 
