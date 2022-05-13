@@ -6,9 +6,6 @@ document.querySelector("#btnEnviar").addEventListener("click",comprobrarCaptcha)
 //variable contenedora de un random
 let random= Math.floor(Math.random()*5) 
 
-
-
-
 //funcion que me genera el random
 function MostrarImg(){
    switch(random){
@@ -36,7 +33,7 @@ function MostrarImg(){
    }
 }
 
-//llamo a la funcion para q se muestre un imagen por pantalla
+//llamo a la funcion para que se muestre una imagen por pantalla al cargar el dom
 MostrarImg();
 
 
@@ -44,18 +41,19 @@ MostrarImg();
 function comprobrarCaptcha(event){
     event.preventDefault();
     let numIngresado= document.querySelector("#respuestaIngresada").value;
+    
     if(numIngresado==random){
         document.querySelector("#resultado").innerHTML="Correcto, Registro valido";
         document.querySelector("#estilocaptcha").classList.add("verificado");
         document.querySelector("#estilocaptcha").classList.remove("error");
-        document.querySelector("#verificado-incorrecto").classList.add("mostrarimagen")
-        document.querySelector("#verificado-incorrecto").src="img/captcha/verficiado.svg"
+        document.querySelector("#verificado-incorrecto").classList.add("mostrarimagen");
+        document.querySelector("#verificado-incorrecto").src="img/captcha/verficiado.svg";
     }
     else{
         document.querySelector("#resultado").innerHTML="Incorrecto, vuelva a intentarlo"
         document.querySelector("#estilocaptcha").classList.add("error");
         document.querySelector("#estilocaptcha").classList.remove("verificado");
-        document.querySelector("#verificado-incorrecto").classList.add("mostrarimagen")
-        document.querySelector("#verificado-incorrecto").src="img/captcha/error.svg"
+        document.querySelector("#verificado-incorrecto").classList.add("mostrarimagen");
+        document.querySelector("#verificado-incorrecto").src="img/captcha/error.svg";
     }
 }
