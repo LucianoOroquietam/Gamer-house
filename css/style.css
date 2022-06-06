@@ -14,12 +14,12 @@ body{
 }
 h2{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 header .encabezado h1{
-    margin-top: 0;
-    font-size: 4rem;
+    font-size: 2rem;
+    margin-left: 5rem;
     color: aliceblue;
     font-family: 'Cinzel', serif;
     display: flex;
@@ -35,8 +35,8 @@ header, nav ul{
 }
 
 div .img-logo{
-    margin-top: -20rem;
-    height: 13rem;
+    margin-top: -5rem;
+    height: 6rem;
     
 }
 .contenedor-header{
@@ -77,12 +77,12 @@ footer img,nav ul,.confirmed-error,.cajaH2 span,.tabladesktop,.h2desktop,.tablad
 
 footer ul li img{
     display: flex;
-    height: 4rem;
+    height: 2.3rem;
 }
 
 footer{
     background-color: #171a21 ;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
 }
 footer ul{
@@ -102,7 +102,7 @@ footer ul li{
 }
 
 footer h3{
-   font-size: 2rem;
+   font-size: 1.2rem;
 }
 
 /*Copyright*/
@@ -111,7 +111,7 @@ footer h3{
     background-color: rgb(197, 191, 191);
     padding: .5rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: black;
 }
 
@@ -127,7 +127,7 @@ div.contenedor-descuento  ul{
 div.contenedor-descuento  ul li{
     margin: 1rem;
     padding: 1rem 0 1rem 0;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 div .contenedor-descuento ul li span{
@@ -183,6 +183,47 @@ th, .fondoTd, fieldset button{
     background-color:#171a21 ;
 }
 
+
+/* Navegacion */
+.btn-menu{
+    display: flex;
+    justify-content: end;
+}
+ul.navegacion{
+    display: none;
+}
+
+ul.navegacion.show{
+    display: block;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+}
+
+nav ul li:hover{
+    background-color:#1B2838;
+    padding: .4rem;
+}
+
+nav ul li{
+    list-style: none;
+    text-transform: capitalize;
+    font-size: .8rem;
+    padding: .5rem;
+    cursor: pointer;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 /*captcha*/
 
 
@@ -228,7 +269,7 @@ table img{
 
 
 
-@media only screen and (min-width:600px){
+@media only screen and (min-width:660px){
     .h2mobile,.tablamobile{
         display: none;
     }
@@ -259,13 +300,20 @@ table img{
 
     /* Navegacion */
 
-    nav ul{
+    .btn-menu{
+        display: none;
+    }
+
+    ul.navegacion{
         display: flex;
+    }
+
+    nav ul{
+        
         margin-top: -5rem;
         margin-left: 3rem;
         padding: 0;
-        color: aliceblue;
-        font-family: 'Cinzel', serif;
+        flex-direction: row;
     }
 
     nav ul li:hover{
@@ -273,20 +321,9 @@ table img{
         padding: .7rem;
         border-bottom: 0.2rem solid white;
     }
-
     nav ul li{
-        list-style: none;
-        text-transform: capitalize;
         font-size: 1.1rem;
-        padding: .5rem;
-        cursor: pointer;
     }
-
-    nav ul li a {
-        text-decoration: none;
-        color: inherit;
-    }
-
 
     /*imagenes*/
 
