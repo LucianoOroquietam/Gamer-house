@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap');
 
- 
 html{
     font-family: 'Roboto', sans-serif;
     line-height: 1.1;
@@ -13,9 +12,6 @@ html{
 body{
     background-color: #1B2838;
 }
-
-/*Titulos*/
-
 h2{
     text-align: center;
     font-size: 2.5rem;
@@ -23,12 +19,15 @@ h2{
 
 header .encabezado h1{
     margin-top: 0;
-    font-size: 6rem;
+    font-size: 4rem;
     color: aliceblue;
     font-family: 'Cinzel', serif;
+    display: flex;
     
 }
-
+.tituloylogo{
+    display: flex;
+}
 /*Encabezado*/
 
 header, nav ul{
@@ -36,90 +35,84 @@ header, nav ul{
 }
 
 div .img-logo{
-    margin-top: -15rem;
-    height: 15rem;
+    margin-top: -20rem;
+    height: 13rem;
     
 }
 .contenedor-header{
     background-color: #171a21;
     padding: .1rem;
 }
-
-
 /*Propiedades repetidas*/
 header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards{
     display: flex;
 }
 
-th, .fondoTd, fieldset button, footer{
-    background-color: #171a21;
-}
-
-fieldset button:hover, legend, .autor{
-    color:#171a21 ;
-}
-/* Navegacion */
-
-nav ul{
-    margin-top: -5rem;
-    margin-left: 3rem;
-    padding: 0;
-    color: aliceblue;
-    font-family: 'Cinzel', serif;
-}
-
-nav ul li:hover{
-    background-color:#1B2838;
-    padding: .7rem;
-    border-bottom: 0.2rem solid white;
-}
-
-nav ul li{
-    list-style: none;
-    text-transform: capitalize;
-    font-size: 1.1rem;
-    padding: .5rem;
-    cursor: pointer;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
 /*imagenes*/
 
-div.contenedor-descuento img{
-    width: 70%;
-    margin: .7rem;
-}
 
+.contenedor-giftcards,.contenedor-footer{
+display: flex;
+flex-direction: column;
+}
 .contenedor-giftcards img{
-    width: 25%;
-    height: 30rem;
+    width: 100%;
 }
 
-footer img {
-    padding: 0;
-    margin-top: -1rem;
-    height: 13rem;
+.redes{
+    flex-direction: row;
 }
+
+footer img,nav ul,.confirmed-error,.cajaH2 span,.tabladesktop,.h2desktop,.tabladesktop{
+    display: none;
+ }
+ div.contenedor-descuento{
+     display: block;
+ }
+ div.contenedor-descuento img{
+     width: 100%;
+ }
+/* Footer */
+
 
 footer ul li img{
-    height: 3rem;
-}
-
-td img{
+    display: flex;
     height: 4rem;
 }
 
-.confirmed-error{
-    display: none;
+footer{
+    background-color: #171a21 ;
+    font-size: 1.5rem;
+    text-align: center;
 }
-.mostrarimagen{
-    display: inline;
-    height: 2rem;
+footer ul{
+    padding: 0;
+}
+footer ul.redes{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer ul li{
+    list-style: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer h3{
+   font-size: 2rem;
+}
+
+/*Copyright*/
+
+.autor{
+    background-color: rgb(197, 191, 191);
+    padding: .5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
 }
 
 
@@ -128,14 +121,16 @@ td img{
 div.contenedor-descuento  ul{
     margin: 2rem 2rem 2rem 0;
     padding: 0;
+    list-style: none;
 }
 
 div.contenedor-descuento  ul li{
     margin: 1rem;
     padding: 1rem 0 1rem 0;
+    font-size: 2rem;
 }
 
-span{
+div .contenedor-descuento ul li span{
     font-weight: 100;
     text-decoration: line-through;
     font-style: italic;
@@ -145,37 +140,14 @@ div.contenedor-descuento ul li {
     font-weight: bold;
 }
 
-/*lo mas vendido y tablas*/
-div.cajaH2 h2{
-    font-size: 4rem;
-    margin: .5rem 1rem 1rem 1rem;
-}
-
-div.cajaH2{
-    text-align: center;
-}
-
-table,td,th{
-    border: solid white 0.1rem;
-    border-collapse: collapse;
-    padding: 1rem;
-    text-align: center;
-    color: rgb(135, 221, 250);
-}
-
-
-
 /*Formulario*/
 
 fieldset div{
-    padding: 1.5rem;
+    display: flex;
+    padding: 0.5rem 0;
+    flex-direction: column;
     text-align: center;
-}
-fieldset{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    width: 50%;
-    margin-left: 25%;
-    box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
+    font-size: larger;
 }
 fieldset button{
     text-transform: uppercase;
@@ -186,14 +158,12 @@ fieldset button{
     font-size: 1.5rem;
 
 }
-
-
-
 fieldset button:hover{
     cursor: pointer;
     background-color: white;
     transition: 0.5s;
     border: 0.3rem solid #171a21;
+    color: black;
 }
 fieldset{
     border-style: none;
@@ -209,17 +179,23 @@ legend{
     
 }
 
-/*Captcha*/
-
-.inputCaptcha{
-    margin: -2rem;
+th, .fondoTd, fieldset button{
+    background-color:#171a21 ;
 }
+
+/*captcha*/
+
+
+.mostrarimagen{
+    display: inline;
+    height: 2rem;
+}
+
 
 .verificado, .error{
     background-color: aliceblue;
     color: black;
-    margin-left: 28.5%;
-    width: 35%;
+    width: 98%;
 }
 
 .verificado{
@@ -229,42 +205,175 @@ legend{
     border: .3rem solid rgb(255, 0, 0);
 
 }
+/*tabla*/
 
-
-/* Footer */
-
-footer{
-    margin-top: .5rem;
+table{
+    border-collapse: collapse;
 }
-
-.contenedor-footer{
-    justify-content: space-around;
-
-}
-
-footer ul.columna-33{
-    display: flex;
-    margin: 0;
-    
-}
-
-footer ul li{
-    margin: 1rem;
-    list-style: none;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-footer h3{
-   margin-top: 2rem;
-   margin-left: 5rem ;
-   font-size: 1rem;
-}
-
-/*Copyright*/
-
-.autor{
-    background-color: rgb(197, 191, 191);
+td,th{
+    border: solid white 0.1rem;
     padding: 1rem;
     text-align: center;
+    color: rgb(135, 221, 250);
+}
+table{
+    width: 100%;
+}
+table img{
+    width: 80%;
+}
+
+
+
+
+@media only screen and (min-width:600px){
+    .h2mobile,.tablamobile{
+        display: none;
+    }
+    .cajaH2 span,.h2desktop,div.contenedor-descuento {
+        display: flex;
+    }
+    .tabladesktop{
+        display: block;
+    }
+    
+    .autor, fieldset div,div.contenedor-descuento ul li{
+        font-size: medium;
+        }
+    /*Encabezado*/
+    header .encabezado h1{
+        font-size: 6rem;
+    }
+
+    header, nav ul{
+        justify-content: center;
+    }
+
+    div .img-logo{
+        margin-top: -15rem;
+        height: 15rem;
+        
+    }
+
+    /* Navegacion */
+
+    nav ul{
+        display: flex;
+        margin-top: -5rem;
+        margin-left: 3rem;
+        padding: 0;
+        color: aliceblue;
+        font-family: 'Cinzel', serif;
+    }
+
+    nav ul li:hover{
+        background-color:#1B2838;
+        padding: .7rem;
+        border-bottom: 0.2rem solid white;
+    }
+
+    nav ul li{
+        list-style: none;
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        padding: .5rem;
+        cursor: pointer;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    /*imagenes*/
+
+    div.contenedor-descuento img{
+        width: 70%;
+        margin: .7rem;
+        display: flex;
+    }
+
+    .contenedor-giftcards {
+        flex-direction: row;
+    }
+    .contenedor-giftcards img{
+        width: 25%;
+        height: 30rem;
+    }
+    .contenedor-footer{
+        flex-direction: row;
+    }
+
+    footer img {
+        display: flex;
+        height: 13rem;
+    }
+
+    footer ul li img{
+        height: 3rem;
+    }
+
+    /*lista descuento*/
+
+    /*lo mas vendido y tablas*/
+    div.cajaH2 h2{
+        justify-content: center;
+    }
+    /*Formulario*/
+
+    fieldset{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    fieldset div{
+        justify-content: center;
+        flex-direction: row;
+    }
+    fieldset{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
+    }
+
+    .respuesta{
+        flex-direction: column;
+    }
+
+
+    /*captcha*/
+    .verificado, .error{
+        width: 50%;
+        margin-left:25% ;
+    }
+    /* Footer */
+    footer{
+        text-align: unset;
+        margin-top: .5rem;
+    }
+    .listacontacto{
+        text-align: center;
+    }
+    .lista-contacto ul{
+        padding-left: 3rem;
+    }
+    .contenedor-footer{
+        justify-content: space-around;
+    }
+
+    footer ul.redes{
+        display: flex;
+    }
+
+    footer ul li{
+        font-size: medium;
+        margin: 1rem;
+    }
+
+    footer h3{
+    margin-top: 2rem;
+    margin-left: 5rem ;
+    font-size: 1rem;
+    }
+
 }
