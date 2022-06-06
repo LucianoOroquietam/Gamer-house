@@ -50,28 +50,29 @@ header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards{
 
 /*imagenes*/
 
-div.contenedor-descuento img{
-  display: none;
-}
-.contenedor-giftcards{
+
+.contenedor-giftcards,.contenedor-footer{
 display: flex;
 flex-direction: column;
 }
 .contenedor-giftcards img{
     width: 100%;
 }
-.contenedor-footer{
-    display: flex;
-    flex-direction: column;
-}
+
 .redes{
     flex-direction: row;
 }
 
+footer img,nav ul,.confirmed-error,.cajaH2 span,.tabladesktop,.h2desktop,.tabladesktop{
+    display: none;
+ }
+ div.contenedor-descuento{
+     display: block;
+ }
+ div.contenedor-descuento img{
+     width: 100%;
+ }
 /* Footer */
-footer img {
-   display: none;
-}
 
 
 footer ul li img{
@@ -139,11 +140,6 @@ div.contenedor-descuento ul li {
     font-weight: bold;
 }
 
-nav ul{
-    display: none;
-}
-
-
 /*Formulario*/
 
 fieldset div{
@@ -189,9 +185,7 @@ th, .fondoTd, fieldset button{
 
 /*captcha*/
 
-.confirmed-error{
-    display: none;
-}
+
 .mostrarimagen{
     display: inline;
     height: 2rem;
@@ -212,13 +206,7 @@ th, .fondoTd, fieldset button{
 
 }
 /*tabla*/
-.cajaH2 span{
-    display: none;
-}
 
-.tabladesktop{
-    display: none;
-}
 table{
     border-collapse: collapse;
 }
@@ -234,9 +222,7 @@ table{
 table img{
     width: 80%;
 }
-.h2desktop{
-    display: none;
-}
+
 
 
 
@@ -244,13 +230,13 @@ table img{
     .h2mobile,.tablamobile{
         display: none;
     }
-    .cajaH2 span,.h2desktop{
+    .cajaH2 span,.h2desktop,div.contenedor-descuento {
         display: flex;
     }
     .tabladesktop{
         display: block;
     }
-
+    
     .autor, fieldset div,div.contenedor-descuento ul li{
         font-size: medium;
         }
@@ -332,7 +318,7 @@ table img{
 
     /*lo mas vendido y tablas*/
     div.cajaH2 h2{
-        font-size: 4rem;
+        justify-content: center;
     }
     /*Formulario*/
 
