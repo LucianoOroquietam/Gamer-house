@@ -1,0 +1,393 @@
+/*Globales*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap');
+
+html{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.1;
+    color: white;
+}
+
+body{
+    background-color: #1B2838;
+}
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+header .encabezado h1{
+    margin-top: 0;
+    font-size: 4rem;
+    color: aliceblue;
+    font-family: 'Cinzel', serif;
+    display: flex;
+    
+}
+.tituloylogo{
+    display: flex;
+}
+/*Encabezado*/
+
+header, nav ul{
+    justify-content: center;
+}
+
+div .img-logo{
+    margin-top: -20rem;
+    height: 13rem;
+    
+}
+.contenedor-header{
+    background-color: #171a21;
+    padding: .1rem;
+}
+/*Propiedades repetidas*/
+header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards{
+    display: flex;
+}
+
+/*imagenes*/
+
+div.contenedor-descuento img{
+  display: none;
+}
+.contenedor-giftcards{
+display: flex;
+flex-direction: column;
+}
+.contenedor-giftcards img{
+    width: 100%;
+}
+.contenedor-footer{
+    display: flex;
+    flex-direction: column;
+}
+.redes{
+    flex-direction: row;
+}
+
+/* Footer */
+footer img {
+   display: none;
+}
+
+
+footer ul li img{
+    display: flex;
+    height: 4rem;
+}
+
+footer{
+    background-color: #171a21 ;
+    font-size: 1.5rem;
+    text-align: center;
+}
+footer ul{
+    padding: 0;
+}
+footer ul.redes{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+footer ul li{
+    list-style: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer h3{
+   font-size: 2rem;
+}
+
+/*Copyright*/
+
+.autor{
+    background-color: rgb(197, 191, 191);
+    padding: .5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+/*lista descuento*/
+
+div.contenedor-descuento  ul{
+    margin: 2rem 2rem 2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+div.contenedor-descuento  ul li{
+    margin: 1rem;
+    padding: 1rem 0 1rem 0;
+    font-size: 2rem;
+}
+
+div .contenedor-descuento ul li span{
+    font-weight: 100;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+div.contenedor-descuento ul li {
+    font-weight: bold;
+}
+
+nav ul{
+    display: none;
+}
+
+
+/*Formulario*/
+
+fieldset div{
+    display: flex;
+    padding: 0.5rem 0;
+    flex-direction: column;
+    text-align: center;
+    font-size: larger;
+}
+fieldset button{
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    border: 0.3rem solid white;
+    color: white;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+
+}
+fieldset button:hover{
+    cursor: pointer;
+    background-color: white;
+    transition: 0.5s;
+    border: 0.3rem solid #171a21;
+    color: black;
+}
+fieldset{
+    border-style: none;
+    background-color: gray;
+    border-radius: 1rem;
+}
+legend{
+    text-align: center;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+}
+
+th, .fondoTd, fieldset button{
+    background-color:#171a21 ;
+}
+
+/*captcha*/
+
+.confirmed-error{
+    display: none;
+}
+.mostrarimagen{
+    display: inline;
+    height: 2rem;
+}
+
+
+.verificado, .error{
+    background-color: aliceblue;
+    color: black;
+    width: 98%;
+}
+
+.verificado{
+    border: .3rem solid rgb(4, 138, 38);
+}
+.error{
+    border: .3rem solid rgb(255, 0, 0);
+
+}
+/*tabla*/
+.cajaH2 span{
+    display: none;
+}
+
+.tabladesktop{
+    display: none;
+}
+table{
+    border-collapse: collapse;
+}
+td,th{
+    border: solid white 0.1rem;
+    padding: 1rem;
+    text-align: center;
+    color: rgb(135, 221, 250);
+}
+table{
+    width: 100%;
+}
+table img{
+    width: 80%;
+}
+.h2desktop{
+    display: none;
+}
+
+
+
+@media only screen and (min-width:600px){
+    .h2mobile,.tablamobile{
+        display: none;
+    }
+    .cajaH2 span,.h2desktop{
+        display: flex;
+    }
+    .tabladesktop{
+        display: block;
+    }
+
+    .autor, fieldset div,div.contenedor-descuento ul li{
+        font-size: medium;
+        }
+    /*Encabezado*/
+    header .encabezado h1{
+        font-size: 6rem;
+    }
+
+    header, nav ul{
+        justify-content: center;
+    }
+
+    div .img-logo{
+        margin-top: -15rem;
+        height: 15rem;
+        
+    }
+
+    /* Navegacion */
+
+    nav ul{
+        display: flex;
+        margin-top: -5rem;
+        margin-left: 3rem;
+        padding: 0;
+        color: aliceblue;
+        font-family: 'Cinzel', serif;
+    }
+
+    nav ul li:hover{
+        background-color:#1B2838;
+        padding: .7rem;
+        border-bottom: 0.2rem solid white;
+    }
+
+    nav ul li{
+        list-style: none;
+        text-transform: capitalize;
+        font-size: 1.1rem;
+        padding: .5rem;
+        cursor: pointer;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    /*imagenes*/
+
+    div.contenedor-descuento img{
+        width: 70%;
+        margin: .7rem;
+        display: flex;
+    }
+
+    .contenedor-giftcards {
+        flex-direction: row;
+    }
+    .contenedor-giftcards img{
+        width: 25%;
+        height: 30rem;
+    }
+    .contenedor-footer{
+        flex-direction: row;
+    }
+
+    footer img {
+        display: flex;
+        height: 13rem;
+    }
+
+    footer ul li img{
+        height: 3rem;
+    }
+
+    /*lista descuento*/
+
+    /*lo mas vendido y tablas*/
+    div.cajaH2 h2{
+        font-size: 4rem;
+    }
+    /*Formulario*/
+
+    fieldset{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    fieldset div{
+        justify-content: center;
+        flex-direction: row;
+    }
+    fieldset{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
+    }
+
+    .respuesta{
+        flex-direction: column;
+    }
+
+
+    /*captcha*/
+    .verificado, .error{
+        width: 50%;
+        margin-left:25% ;
+    }
+    /* Footer */
+    footer{
+        text-align: unset;
+        margin-top: .5rem;
+    }
+    .listacontacto{
+        text-align: center;
+    }
+    .lista-contacto ul{
+        padding-left: 3rem;
+    }
+    .contenedor-footer{
+        justify-content: space-around;
+    }
+
+    footer ul.redes{
+        display: flex;
+    }
+
+    footer ul li{
+        font-size: medium;
+        margin: 1rem;
+    }
+
+    footer h3{
+    margin-top: 2rem;
+    margin-left: 5rem ;
+    font-size: 1rem;
+    }
+
+}
