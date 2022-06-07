@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded",loadPage);
 
 
 function loadPage(){
+    "use strict";
 
     let form=document.querySelector("#form");
     let tabla=document.querySelector("#tablaForm");
@@ -62,7 +63,7 @@ function loadPage(){
 
 
     function mostrarTabla(){
-        let pos=0;
+       
         tabla.innerHTML=
         `<thead>
             <tr>
@@ -75,6 +76,7 @@ function loadPage(){
         </thead>`
 
         for (const usuario of tablaUsuarios) {
+           
             tabla.innerHTML+=
             `<tr>
             <td>${usuario.Nombre}</td>

@@ -25,12 +25,9 @@ header .encabezado h1{
     margin-left: 5rem;
     color: aliceblue;
     font-family: 'Cinzel', serif;
-    display: flex;
     
 }
-.tituloylogo{
-    display: flex;
-}
+
 /*Encabezado*/
 
 header, nav ul{
@@ -47,7 +44,7 @@ div .img-logo{
     padding: .1rem;
 }
 /*Propiedades repetidas*/
-header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards{
+header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards, .tituloylogo, header .encabezado h1,footer ul li img,footer ul.redes,fieldset div,.btn-menu{
     display: flex;
 }
 
@@ -55,7 +52,6 @@ header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards{
 
 
 .contenedor-giftcards,.contenedor-footer{
-display: flex;
 flex-direction: column;
 }
 .contenedor-giftcards img{
@@ -79,7 +75,6 @@ footer img,nav ul,.confirmed-error,.cajaH2 span,.tabladesktop,.h2desktop,.tablad
 
 
 footer ul li img{
-    display: flex;
     height: 2.3rem;
 }
 
@@ -92,7 +87,6 @@ footer ul{
     padding: 0;
 }
 footer ul.redes{
-    display: flex;
     margin: 0;
     justify-content: center;
     margin-bottom: 2rem;
@@ -146,7 +140,6 @@ div.contenedor-descuento ul li {
 /*Formulario*/
 
 fieldset div{
-    display: flex;
     padding: 0.5rem 0;
     flex-direction: column;
     text-align: center;
@@ -158,7 +151,11 @@ fieldset button{
     border: 0.3rem solid white;
     color: white;
     border-radius: .5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    width: 70%;
+    margin-left: 15%;
+    
 
 }
 fieldset button:hover{
@@ -189,7 +186,6 @@ th, .fondoTd, fieldset button{
 
 /* Navegacion */
 .btn-menu{
-    display: flex;
     justify-content: end;
 }
 ul.navegacion{
@@ -201,7 +197,6 @@ ul.navegacion.show{
 }
 
 nav ul{
-    display: flex;
     flex-direction: column;
     color: aliceblue;
     font-family: 'Cinzel', serif;
@@ -229,10 +224,14 @@ nav ul li a {
 
 /*captcha*/
 
-
+.img-captcha{
+    width: 50%;
+    margin-left: 25%;
+}
 .mostrarimagen{
     display: inline;
-    height: 2rem;
+    height: 1.5rem;
+    
 }
 
 
@@ -266,9 +265,7 @@ table{
 table img{
     width: 80%;
 }
-.descuento{
-    background-color:lightslategray;
-}
+
 
 
 
@@ -356,13 +353,25 @@ table img{
         height: 3rem;
     }
 
-    /*lista descuento*/
-
+   
     /*lo mas vendido y tablas*/
     div.cajaH2 h2{
         justify-content: center;
     }
+
     /*Formulario*/
+    fieldset input{
+        margin-bottom: 1rem;
+        width: 50%;
+        margin-left: 25%;
+    }
+    fieldset button{
+        
+        width: 50%;
+        margin-left: 25%;
+        
+    
+    }
 
     fieldset{
         width: 50%;
@@ -371,23 +380,35 @@ table img{
 
     fieldset div{
         justify-content: center;
-        flex-direction: row;
+        
     }
     fieldset{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
         box-shadow: 0.625rem 0.625rem 0.313rem 0 rgba(0,0,0,0.75);
     }
-
-    .respuesta{
-        flex-direction: column;
+    .tabla-dinamica{
+        margin: 2rem 0;
     }
 
 
     /*captcha*/
+    div.inputCaptcha input{
+        width: 25%;
+        margin-left: 37%;
+    }
+    .img-captcha{
+        width:15%;
+        margin-left: 40%;
+        
+    }
     .verificado, .error{
         width: 50%;
         margin-left:25% ;
     }
+    .respuesta{
+        flex-direction: column;
+    }
+
     /* Footer */
     footer{
         text-align: unset;
