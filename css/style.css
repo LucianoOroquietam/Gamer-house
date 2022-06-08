@@ -21,8 +21,8 @@ h2{
 }
 
 header .encabezado h1{
-    font-size: 2rem;
-    margin-left: 5rem;
+    font-size: 1.8rem;
+    margin-left: 6rem;
     color: aliceblue;
     font-family: 'Cinzel', serif;
     
@@ -62,7 +62,7 @@ flex-direction: column;
     flex-direction: row;
 }
 
-footer img,nav ul,.confirmed-error,.cajaH2 span,.tabladesktop,.h2desktop,.tabladesktop{
+footer img,nav ul,.confirmed-error,.cajaH2 span,.h2desktop{
     display: none;
  }
  div.contenedor-descuento{
@@ -270,9 +270,7 @@ table img{
 
 
 @media only screen and (min-width:660px){
-    .h2mobile,.tablamobile{
-        display: none;
-    }
+
     .cajaH2 span,.h2desktop,div.contenedor-descuento {
         display: flex;
     }
@@ -398,7 +396,7 @@ table img{
     }
     .img-captcha{
         width:15%;
-        margin-left: 40%;
+        margin-left: 42.5%;
         
     }
     .verificado, .error{
@@ -439,4 +437,13 @@ table img{
     font-size: 1rem;
     }
 
+}
+
+/*Tabla responsiva uso de media query para celular*/
+@media screen and (max-width: 480px){
+    td, tr,th {
+        border-collapse: collapse;
+        display: block;
+        padding: 1em;
+    }
 }
