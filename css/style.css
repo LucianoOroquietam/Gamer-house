@@ -41,7 +41,7 @@ div .img-logo{
 }
 .contenedor-header{
     background-color: #171a21;
-    padding: .1rem;
+    padding: 1rem;
 }
 /*Propiedades repetidas*/
 header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards, .tituloylogo, header .encabezado h1,footer ul li img,footer ul.redes,fieldset div,.btn-menu{
@@ -269,6 +269,7 @@ table img{
 
 
 
+
 @media only screen and (min-width:660px){
 
     .cajaH2 span,.h2desktop,div.contenedor-descuento {
@@ -282,6 +283,7 @@ table img{
         font-size: medium;
         }
     /*Encabezado*/
+
     header .encabezado h1{
         font-size: 6rem;
     }
@@ -290,7 +292,8 @@ table img{
         justify-content: center;
     }
 
-    div .img-logo{
+    div img.img-logo{
+        display: block;
         margin-top: -15rem;
         height: 15rem;
         
@@ -438,6 +441,7 @@ table img{
     }
 
 }
+
 
 /*Tabla responsiva uso de media query para celular*/
 @media screen and (max-width: 480px){
