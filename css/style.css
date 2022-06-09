@@ -22,7 +22,7 @@ h2{
 
 header .encabezado h1{
     font-size: 1.8rem;
-    margin-left: 6rem;
+    margin-left: 4.9rem;
     color: aliceblue;
     font-family: 'Cinzel', serif;
     
@@ -36,7 +36,7 @@ header, nav ul{
 
 div .img-logo{
     margin-top: -5rem;
-    height: 6rem;
+    height: 5rem;
     
 }
 .contenedor-header{
@@ -44,7 +44,7 @@ div .img-logo{
     padding: 1rem;
 }
 /*Propiedades repetidas*/
-header,nav ul, .contenedor-descuento, .contenedor-footer, .contenedor-giftcards, .tituloylogo, header .encabezado h1,footer ul li img,footer ul.redes,fieldset div,.btn-menu{
+header,nav ul, aside, .contenedor-footer, .contenedor-giftcards, .tituloylogo, header .encabezado h1,footer ul li img,footer ul.redes,fieldset div,.btn-menu{
     display: flex;
 }
 
@@ -65,10 +65,10 @@ flex-direction: column;
 footer img,nav ul,.confirmed-error,.cajaH2 span,.h2desktop{
     display: none;
  }
- div.contenedor-descuento{
+ aside{
      display: block;
  }
- div.contenedor-descuento img{
+ aside img{
      width: 100%;
  }
 /* Footer */
@@ -115,25 +115,25 @@ footer h3{
 
 /*lista descuento*/
 
-div.contenedor-descuento  ul{
+aside ul{
     margin: 2rem 2rem 2rem 0;
     padding: 0;
     list-style: none;
 }
 
-div.contenedor-descuento  ul li{
+aside ul li{
     margin: 1rem;
     padding: 1rem 0 1rem 0;
     font-size: 1rem;
 }
 
-div .contenedor-descuento ul li span{
+aside ul li span{
     font-weight: 100;
     text-decoration: line-through;
     font-style: italic;
 }
 
-div.contenedor-descuento ul li {
+aside ul li {
     font-weight: bold;
 }
 
@@ -272,14 +272,14 @@ table img{
 
 @media only screen and (min-width:660px){
 
-    .cajaH2 span,.h2desktop,div.contenedor-descuento {
+    .cajaH2 span,.h2desktop,aside {
         display: flex;
     }
     .tabladesktop{
         display: block;
     }
     
-    .autor, fieldset div,div.contenedor-descuento ul li{
+    .autor, fieldset div,aside ul li{
         font-size: medium;
         }
     /*Encabezado*/
@@ -328,7 +328,7 @@ table img{
 
     /*imagenes*/
 
-    div.contenedor-descuento img{
+    aside img{
         width: 70%;
         margin: .7rem;
         display: flex;
