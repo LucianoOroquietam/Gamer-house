@@ -4,15 +4,13 @@
 document.querySelector("#btnEnviar").addEventListener("click",comprobrarCaptcha);
 
 //variable contenedora de un random
-let random= Math.floor(Math.random()*5) 
+let random= Math.floor(Math.random()*(6-1)+1); 
 
 //funcion que me genera el random
 function MostrarImg(){
+    console.log(random)
    switch(random){
-       case 0:{
-        document.querySelector("#imgCaptcha").src="img/captcha/resultado0.jpg"
-        break;
-       }
+      
        case 1:{
         document.querySelector("#imgCaptcha").src="img/captcha/resultado1.jpg"
         break;
@@ -29,7 +27,10 @@ function MostrarImg(){
         document.querySelector("#imgCaptcha").src="img/captcha/resultado4.jpg"
         break;
        }
-      
+       case 5:{
+        document.querySelector("#imgCaptcha").src="img/captcha/resultado5.jpg"
+        break;
+       }
    }
 }
 
