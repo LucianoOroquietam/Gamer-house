@@ -111,6 +111,7 @@ function loadPage(){
 
         }
         catch(error){
+
             console.log(error)//msj html
         }
         mostrarTabla();
@@ -130,6 +131,7 @@ function loadPage(){
             document.querySelector("#mail").value=usuario.mail;
             document.querySelector("#numero").value=usuario.numero;
             document.querySelector("#pass").value=usuario.password;
+            //esta bien usar el value? ya usamos el formdata para obtener los datos
         }catch(error){
             //msj html
         }
