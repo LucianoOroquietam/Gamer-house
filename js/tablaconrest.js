@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",loadPage);
 function loadPage(){
 
 
-    
+    const modal= document.querySelector(".modal");
     const form=document.querySelector("#form");
     form.addEventListener("submit",enviarDatos);
     const tabla=document.querySelector("#tablaForm");
@@ -43,7 +43,7 @@ function loadPage(){
                 <td>${elemento.mail}</td>
                 <td>${elemento.numero}</td>
                 <td>${elemento.password}</td>
-                <td><a href="#form"><button class="editar" data-element-id="${elemento.id}">Editar</button></a><button class="confirmar" data-element-id="${elemento.id}">Confirmar</button></td>
+                <td><button class="editar" data-element-id="${elemento.id}">Editar</button></td>
                 <td><button class="borrar" data-element-id="${elemento.id}">Borrar</button></td>
                 </tr>`
             })
@@ -127,31 +127,38 @@ function loadPage(){
                 "method":"GET"
             })
             let usuario= await response.json();
-            document.querySelector("#nombre").value=usuario.nombre;
-            document.querySelector("#mail").value=usuario.mail;
-            document.querySelector("#numero").value=usuario.numero;
-            document.querySelector("#pass").value=usuario.password;
-            //esta bien usar el value? ya usamos el formdata para obtener los datos
+            
+            
+            modal.innerHTML=`  <form id="formEditado"> <input id="nombre" name="nombre" type="text">
+                                <input id="mail" name="mail" type="text">
+                                <input id="numero" name="numero" type="text">
+                                <input id="pass" name="pass" type="text">
+                                <button data-element-id="${id}" class="guardar">guardar</button></form>`
+            let guardar= document.querySelectorAll(".guardar");
+            guardar.forEach(e=>e.addEventListener("click",guardarEdicion))
+            modal.querySelector("#nombre").value=usuario.nombre;
+            modal.querySelector("#mail").value=usuario.mail;
+            modal.querySelector("#numero").value=usuario.numero;
+            modal.querySelector("#pass").value=usuario.password;
         }catch(error){
             //msj html
         }
-        let btnConfirmar= tabla.querySelectorAll(".confirmar");
-        btnConfirmar.forEach(e=> e.addEventListener("click",confirmarEdicion));
 
     }
-
-
-
-    async function confirmarEdicion(){
-
+    
+    async function guardarEdicion(){
+        event.preventDefault()
         let id= this.dataset.elementId;
-
-        let formdata= new FormData(form);
-        let nombre=formdata.get('name');
+            console.log(id)
+  
+        
+        let formEditado= modal.querySelector("#formEditado");
+        let formdata= new FormData(formEditado);
+        let nombre=formdata.get('nombre');
         let email=formdata.get('mail');
         let numero=formdata.get('numero');
         let contraseña=formdata.get('pass')
-        form.reset();
+        formEditado.reset();
         let datosUsuario={
 
             "nombre":nombre,
@@ -160,7 +167,8 @@ function loadPage(){
             "password":contraseña
 
         }
-
+        console.log(datosUsuario)
+        
         try{
 
             let response= await fetch(`${url}/${id}`,{
@@ -176,8 +184,7 @@ function loadPage(){
         }
 
         mostrarTabla()
-
-
+    
 
     }
 
