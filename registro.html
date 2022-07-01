@@ -47,18 +47,18 @@
                <legend>Ingresa tus datos</legend>
                 <div class="nombreMail">
                     <label for="nombre">Nombre de Usuario</label>
-                    <input type="text" name="name" placeholder="Aqui va su usuario ">
+                    <input type="text" name="name" id="nombre" placeholder="Aqui va su usuario "  required>
                     
                     
                     <label for="mail">E-mail</label>
-                    <input type="email" placeholder="Ejemplo@gmail.com" name="mail" >
+                    <input type="email" placeholder="Ejemplo@gmail.com" id="mail" name="mail"  required>
                </div>
                <div class="numeroPass">
                     <label for="numero">Numero de telefono</label>   
-                   <input type="number" name="numero" id="" placeholder="2494123456">
+                   <input type="text" name="numero" id="numero" placeholder="2494123456" required>
                 
                    <label for="pass">Contraseña</label>
-                   <input type="password" name="pass" placeholder="*******" minlength="6" maxlength="10">
+                   <input type="password" name="pass" id="pass" placeholder="*******" minlength="6" maxlength="10" required>
                </div>
                
                <div class="respuesta">
@@ -81,8 +81,6 @@
                </div>
                <button  id="agregarUno">Agregar Usuario</button>
                <button id="agregarTres">Agregar 3 Usuarios</button>
-               <button id="borrarUno">Eliminar Uno</button>
-               <button id="vaciar">Vaciar Tabla</button>
             </div>
            </fieldset>
         </form>
@@ -128,6 +126,6 @@
         
         <script type="text/javascript" src="js/captcha.js"></script>
         <script src="js/toogle.js"></script>
-        <script src="js/tabladinamica.js"></script>
+        <script src="js/tablaconrest.js"></script>
 </body>
 </html>

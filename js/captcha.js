@@ -8,7 +8,6 @@ let random= Math.floor(Math.random()*(6-1)+1);
 
 //funcion que me genera el random
 function MostrarImg(){
-    console.log(random)
    switch(random){
       
        case 1:{
@@ -39,6 +38,7 @@ MostrarImg();
 
 
 //verifico lo que ingresa el usuario
+
 function comprobrarCaptcha(event){
     event.preventDefault();
     let numIngresado= document.querySelector("#respuestaIngresada").value;
