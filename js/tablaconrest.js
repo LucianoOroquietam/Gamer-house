@@ -121,6 +121,7 @@ function loadPage(){
 
     async function editar(){
 
+        modal.classList.remove("hide");
         let id= this.dataset.elementId;
         try{
             let response = await fetch(`${url}/${id}`,{
@@ -129,17 +130,27 @@ function loadPage(){
             let usuario= await response.json();
             
             
-            modal.innerHTML=`  <form id="formEditado"> <input id="nombre" name="nombre" type="text">
+            modal.innerHTML=`  <form id="formEditado">
+                                <fieldset>
+                                <label>Nombre</label> 
+                                <input id="nombre" name="nombre" type="text">
+                                <label>Mail</label> 
                                 <input id="mail" name="mail" type="text">
+                                <label>Telefono</label> 
                                 <input id="numero" name="numero" type="text">
+                                <label>Contraseña</label> 
                                 <input id="pass" name="pass" type="text">
-                                <button data-element-id="${id}" class="guardar">guardar</button></form>`
+                                <button data-element-id="${id}" class="guardar">guardar</button>
+                                </fieldset> 
+                               </form>`
             let guardar= document.querySelectorAll(".guardar");
             guardar.forEach(e=>e.addEventListener("click",guardarEdicion))
             modal.querySelector("#nombre").value=usuario.nombre;
             modal.querySelector("#mail").value=usuario.mail;
             modal.querySelector("#numero").value=usuario.numero;
             modal.querySelector("#pass").value=usuario.password;
+            
+
         }catch(error){
             //msj html
         }
@@ -157,7 +168,7 @@ function loadPage(){
         let nombre=formdata.get('nombre');
         let email=formdata.get('mail');
         let numero=formdata.get('numero');
-        let contraseña=formdata.get('pass')
+        let contraseña=formdata.get('pass');
         formEditado.reset();
         let datosUsuario={
 
@@ -182,6 +193,8 @@ function loadPage(){
         catch(error){
             //msj html
         }
+
+        modal.classList.add("hide");
 
         mostrarTabla()
     

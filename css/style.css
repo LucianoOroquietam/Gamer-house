@@ -146,7 +146,7 @@ fieldset div{
     text-align: center;
     font-size: larger;
 }
-fieldset button{
+ button{
     text-transform: uppercase;
     padding: .5rem 1rem;
     border: 0.3rem solid white;
@@ -159,7 +159,7 @@ fieldset button{
     
 
 }
-fieldset button:hover{
+button:hover{
     cursor: pointer;
     background-color: white;
     transition: 0.5s;
@@ -180,7 +180,7 @@ legend{
     
 }
 
-th, .fondoTd, fieldset button{
+th, .fondoTd, button{
     background-color:#171a21 ;
 }
 
@@ -267,6 +267,31 @@ table img{
     width: 80%;
 }
 
+.modal{
+   
+    position: fixed;
+    top: 10rem;
+    bottom: 0;
+    left: 20%;
+    margin: 5rem;
+    max-width: 50rem;
+    display: flex;
+    
+
+   
+}
+.hide{
+    display: none;
+}
+
+.modal input,.modal label{
+    margin-left: 0;
+    padding: .2rem;
+    margin-right: 10rem;
+    margin-left: 6rem;
+    
+}
+
 
 
 
@@ -275,6 +300,7 @@ table img{
 
     .cajaH2 span,.h2desktop,aside {
         display: flex;
+        
     }
     .tabladesktop{
         display: block;
