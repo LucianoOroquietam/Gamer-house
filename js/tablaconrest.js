@@ -8,7 +8,7 @@ function loadPage(){
     form.addEventListener("submit",enviarDatos);
     const tabla=document.querySelector("#tablaForm");
     const url ="https://62b60d376999cce2e8fe6127.mockapi.io/persona"
-
+    document.querySelector("#agregarTres").addEventListener("click",agregarTres);
     mostrarTabla()
 
 
@@ -157,7 +157,7 @@ function loadPage(){
 
     }
     
-    async function guardarEdicion(){
+    async function guardarEdicion(){//crear hyperlink a footer
         event.preventDefault()
         let id= this.dataset.elementId;
             console.log(id)
@@ -201,6 +201,30 @@ function loadPage(){
 
     }
 
+    async function agregarTres(){
+
+        let tresUsuarios={}
+        
+        let numero=0
+        while(numero<3){
+        try{
+
+                    let response= await fetch(url,{
+                        "method":"POST",
+                        "headers":{"Content-type":"application/json"},
+                        "body":JSON.stringify(tresUsuarios)
+                    })
+
+                }
+                catch(error){
+                    //msj html
+                }
+                numero++;
+    }
+        mostrarTabla()
+
+
+    }
 
 
 
