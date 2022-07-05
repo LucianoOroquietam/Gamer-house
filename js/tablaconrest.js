@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",loadPage);
 
 function loadPage(){
 
-
+    const statusError=document.querySelector(".statusError");
     const modal= document.querySelector(".modal");
     const form=document.querySelector("#form");
     form.addEventListener("submit",enviarDatos);
@@ -57,12 +57,13 @@ function loadPage(){
             
         }
         catch(error){
-            console.log(error)//agregar en html un msj
+            let mensaje = 'mostrar la tabla';
+            mensajeError(mensaje);
         }
 
     }
 
-    async function enviarDatos(){
+    async function enviarDatos(event){
         event.preventDefault();
 
         let formdata= new FormData(form);
@@ -95,7 +96,8 @@ function loadPage(){
 
         }
         catch(error){
-            //msj html
+            let mensaje = 'enviar datos';
+            mensajeError(mensaje);
         }
 
     }
@@ -109,12 +111,21 @@ function loadPage(){
                 "method":"DELETE"
             })
 
+
+
+            if(response.status===200){
+                mostrarTabla();
+            }
+
         }
+
+
         catch(error){
 
-            console.log(error)//msj html
+            let mensaje = 'borrar';
+            mensajeError(mensaje);
         }
-        mostrarTabla();
+        
 
     }
 
@@ -152,15 +163,16 @@ function loadPage(){
             
 
         }catch(error){
-            //msj html
+            let mensaje = 'obtener los datos para la edicion';
+            mensajeError(mensaje);
         }
 
     }
     
-    async function guardarEdicion(){//crear hyperlink a footer
+    async function guardarEdicion(event){//crear hyperlink a footer
         event.preventDefault()
         let id= this.dataset.elementId;
-            console.log(id)
+            
   
         
         let formEditado= modal.querySelector("#formEditado");
@@ -178,7 +190,7 @@ function loadPage(){
             "password":contraseña
 
         }
-        console.log(datosUsuario)
+        
         
         try{
 
@@ -189,17 +201,26 @@ function loadPage(){
             })
             
 
+
+            if(response.status===200){
+                mostrarTabla();
+            }
         }
+
+
         catch(error){
-            //msj html
+            let mensaje = 'editar';
+            mensajeError(mensaje);
+
         }
 
         modal.classList.add("hide");
 
-        mostrarTabla()
     
 
     }
+
+
 
     async function agregarTres(){
 
@@ -215,19 +236,33 @@ function loadPage(){
                         "body":JSON.stringify(tresUsuarios)
                     })
 
-                }
+                    if(response.status===201){
+                        mostrarTabla();
+                    }
+        }
                 catch(error){
-                    //msj html
+                    let mensaje = 'agregar 3 Usuarios';
+                    mensajeError(mensaje);
+                    
                 }
                 numero++;
     }
-        mostrarTabla()
-
-
+        
     }
 
 
 
+    function mensajeError(error){
+        statusError.classList.remove("hide");
+       
+        
+        statusError.innerHTML= `<h1>ERROR!! Fallo al ${error} </h1> `
+        setTimeout(()=>{
 
+            statusError.classList.add("hide");
+
+        }, 3000)
+       
+    }
 
 }
