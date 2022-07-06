@@ -144,22 +144,19 @@ function loadPage(){
             modal.innerHTML=`  <form id="formEditado">
                                 <fieldset>
                                 <label>Nombre</label> 
-                                <input id="nombre" name="nombre" type="text">
+                                <input id="nombre" name="nombre" type="text" value="${usuario.nombre}">
                                 <label>Mail</label> 
-                                <input id="mail" name="mail" type="text">
+                                <input id="mail" name="mail" type="text" value="${usuario.mail}">
                                 <label>Telefono</label> 
-                                <input id="numero" name="numero" type="text">
+                                <input id="numero" name="numero" type="text" value="${usuario.numero}">
                                 <label>Contraseña</label> 
-                                <input id="pass" name="pass" type="text">
+                                <input id="pass" name="pass" type="text" value="${usuario.password}">
                                 <button data-element-id="${id}" class="guardar">guardar</button>
                                 </fieldset> 
                                </form>`
             let guardar= document.querySelectorAll(".guardar");
             guardar.forEach(e=>e.addEventListener("click",guardarEdicion))
-            modal.querySelector("#nombre").value=usuario.nombre;
-            modal.querySelector("#mail").value=usuario.mail;
-            modal.querySelector("#numero").value=usuario.numero;
-            modal.querySelector("#pass").value=usuario.password;
+          
             
 
         }catch(error){
