@@ -166,7 +166,7 @@ function loadPage(){
 
     }
     
-    async function guardarEdicion(event){//crear hyperlink a footer
+    async function guardarEdicion(event){
         event.preventDefault()
         let id= this.dataset.elementId;
             
