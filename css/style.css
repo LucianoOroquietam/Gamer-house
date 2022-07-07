@@ -155,7 +155,7 @@ fieldset div{
     font-size: 1rem;
     margin-bottom: -.5rem;
     width: 70%;
-    margin-left: 15%;
+    
     
 
 }
@@ -225,30 +225,18 @@ nav ul li a {
 
 /*captcha*/
 
+#estilocaptcha img{
+    height: 7.5rem;
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
 .img-captcha{
     width: 50%;
     margin-left: 25%;
 }
-.mostrarimagen{
-    display: inline;
-    height: 1.5rem;
-    
-}
 
-
-.verificado, .error{
-    background-color: aliceblue;
-    color: black;
-    width: 98%;
-}
-
-.verificado{
-    border: .3rem solid rgb(4, 138, 38);
-}
-.error{
-    border: .3rem solid rgb(255, 0, 0);
-
-}
 /*tabla*/
 
 table{
@@ -272,7 +260,7 @@ table img{
     position: fixed;
     top: 10rem;
     bottom: 0;
-    left: 20%;
+    left: -5rem;
     margin: 5rem;
     max-width: 50rem;
     display: flex;
@@ -283,6 +271,8 @@ table img{
 .hide{
     display: none;
 }
+
+
 
 .modal input,.modal label{
     margin-left: 0;
@@ -310,8 +300,40 @@ table img{
 
 
 
+fieldset button{
+    margin-left: 15%;    
+    margin-top: 2rem;
+
+}
+
+
+button.guardar{
+    width: 50%;
+}
+
+
+
+/*Tabla responsiva uso de media query para celular*/
+@media screen and (max-width: 480px){
+    td, tr,th {
+        border-collapse: collapse;
+        display: block;
+        padding: .7rem;
+        margin-left: 0;
+    }
+}
+
 
 @media only screen and (min-width:660px){
+
+    .modal{
+        left: 18%;
+    }
+
+    button.guardar{
+        width: 70%;
+    }
+    
 
     .cajaH2 span,.h2desktop,aside {
         display: flex;
@@ -408,13 +430,7 @@ table img{
         width: 50%;
         margin-left: 25%;
     }
-    fieldset button{
-        
-        width: 50%;
-        margin-left: 25%;
-        margin-top: 2rem;
     
-    }
 
     fieldset{
         width: 50%;
@@ -444,10 +460,7 @@ table img{
         margin-left: 42.5%;
         
     }
-    .verificado, .error{
-        width: 50%;
-        margin-left:25% ;
-    }
+   
     .respuesta{
         flex-direction: column;
     }
@@ -485,11 +498,4 @@ table img{
 }
 
 
-/*Tabla responsiva uso de media query para celular*/
-@media screen and (max-width: 480px){
-    td, tr,th {
-        border-collapse: collapse;
-        display: block;
-        padding: 1em;
-    }
-}
+

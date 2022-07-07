@@ -51,7 +51,7 @@
                     
                     
                     <label for="mail">E-mail</label>
-                    <input type="email" placeholder="Ejemplo@gmail.com" name="mail"  required>
+                    <input type="email" placeholder="Ejemplo@gmail.com"  name="mail"  required>
                </div>
                <div class="numeroPass">
                     <label for="numero">Numero de telefono</label>   
@@ -76,16 +76,17 @@
                    <button id="btnEnviar" type="submit">Confirmar</button>
                </div>
                <div id="estilocaptcha">
-                   <img class="confirmed-error" id="verificado-incorrecto" src="img/Captcha/verficiado.svg" alt="">
-                   <p id="resultado"></p>
+                   <img id="verificado-incorrecto" class="imgCaptcha hide" src="img/Captcha/captcha error.png" alt="">
                </div>
+
                <button class="btnAgregarUno"  id="agregarUno">Agregar Usuario</button>
-               <button class="btnAgregarTres" id="agregarTres" type="button">Agregar 3 Usuarios</button>
+               <button class="btnAgregarTres" type="button" id="agregarTres">Agregar 3 Usuarios</button>
             
             </div>
+            
            </fieldset>
         </form>
-       
+        
         <div class="modal"></div>
         <table class="tabla-dinamica" id="tablaForm">
 
@@ -135,3 +136,4 @@
         <script src="js/tablaconrest.js"></script>
 </body>
 </html>
+

@@ -44,17 +44,27 @@ function comprobrarCaptcha(event){
     let numIngresado= document.querySelector("#respuestaIngresada").value;
     
     if(numIngresado==random){
-        document.querySelector("#resultado").innerHTML="Correcto, Registro valido";
-        document.querySelector("#estilocaptcha").classList.add("verificado");
-        document.querySelector("#estilocaptcha").classList.remove("error");
-        document.querySelector("#verificado-incorrecto").classList.add("mostrarimagen");
-        document.querySelector("#verificado-incorrecto").src="img/captcha/verficiado.svg";
+        
+        document.querySelector("#verificado-incorrecto").classList.remove("hide");
+        
+        document.querySelector("#verificado-incorrecto").src="img/captcha/captcha validado.png";
+        setTimeout(()=>{
+
+            document.querySelector("#verificado-incorrecto").classList.add("hide");
+            
+           
+        }, 2000)
     }
     else{
-        document.querySelector("#resultado").innerHTML="Incorrecto, vuelva a intentarlo"
-        document.querySelector("#estilocaptcha").classList.add("error");
-        document.querySelector("#estilocaptcha").classList.remove("verificado");
-        document.querySelector("#verificado-incorrecto").classList.add("mostrarimagen");
-        document.querySelector("#verificado-incorrecto").src="img/captcha/error.svg";
+
+         document.querySelector("#verificado-incorrecto").classList.remove("hide");
+         document.querySelector("#verificado-incorrecto").src="img/captcha/captcha error.png";
+        
+        setTimeout(()=>{
+            
+            document.querySelector("#verificado-incorrecto").classList.add("hide");
+            
+        }, 2000)
+       
     }
 }
